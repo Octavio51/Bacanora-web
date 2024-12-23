@@ -1,99 +1,92 @@
-/* Estilos generales */
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f7f3e9;
+  background-color: #f9f9f9;
   color: #333;
+  line-height: 1.6;
 }
 
-/* Encabezado principal */
-header.hero {
-  background: linear-gradient(to right, #8B4513, #DEB887);
+/* Header / Hero Section */
+.hero {
+  background-color: #8b4513; /* Marrón oscuro para destacar */
   color: white;
   text-align: center;
-  padding: 50px 20px;
-  overflow: hidden;
+  padding: 2rem 1rem;
 }
 
-header.hero h1 {
-  font-size: 3rem;
+.hero h1 {
+  font-size: 2.5rem;
   margin: 0;
 }
 
-header.hero p {
+.hero p {
   font-size: 1.2rem;
-  margin: 10px 0 0;
+  margin-top: 0.5rem;
 }
 
-/* Animación */
-@keyframes fadeInUp {
+/* Section Styles */
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+p, li {
+  font-size: 1rem;
+}
+
+/* Image Styles */
+.image {
+  max-width: 100%; /* Imagen no será más grande que su contenedor */
+  height: auto; /* Mantener proporciones */
+  display: block;
+  margin: 1rem auto;
+}
+
+.small-image {
+  max-width: 50%; /* Ajuste de ancho para imágenes más pequeñas */
+  height: auto; /* Mantener proporciones */
+}
+
+/* List Styles */
+ol, ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #333;
+  color: white;
+}
+
+/* Animations */
+.animate {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(-20px);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.animate {
-  opacity: 0;
-  animation: fadeInUp 1s ease-out forwards;
-}
-
-.animate:nth-child(1) {
-  animation-delay: 0.2s;
-}
-
-.animate:nth-child(2) {
-  animation-delay: 0.5s;
-}
-
-/* Contenido principal */
-main {
-  padding: 20px;
-}
-
-section {
-  margin: 20px 0;
-}
-
-section h2 {
-  color: #8B4513;
-  border-bottom: 2px solid #DEB887;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-section p, section ol, section ul {
-  line-height: 1.6;
-}
-
-.image {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 10px;
-  display: block;
-  margin: 20px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Lista ordenada */
-section ol {
-  padding-left: 20px;
-}
-
-section ol li {
-  margin-bottom: 10px;
-}
-
-/* Pie de página */
-footer {
-  text-align: center;
-  background-color: #8B4513;
-  color: white;
-  padding: 10px 0;
-  font-size: 0.9rem;
 }
