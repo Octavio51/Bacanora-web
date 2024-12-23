@@ -1,36 +1,99 @@
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f3e9;
+  color: #333;
 }
 
-header {
-    background: #0078a0;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+/* Encabezado principal */
+header.hero {
+  background: linear-gradient(to right, #8B4513, #DEB887);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  overflow: hidden;
 }
 
+header.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+header.hero p {
+  font-size: 1.2rem;
+  margin: 10px 0 0;
+}
+
+/* Animación */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.animate:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.animate:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+/* Contenido principal */
 main {
-    padding: 1rem;
-    max-width: 800px;
-    margin: auto;
+  padding: 20px;
 }
 
 section {
-    background: #fff;
-    margin: 1rem 0;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
 }
 
+section h2 {
+  color: #8B4513;
+  border-bottom: 2px solid #DEB887;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+section p, section ol, section ul {
+  line-height: 1.6;
+}
+
+.image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Lista ordenada */
+section ol {
+  padding-left: 20px;
+}
+
+section ol li {
+  margin-bottom: 10px;
+}
+
+/* Pie de página */
 footer {
-    text-align: center;
-    padding: 1rem;
-    background: #333;
-    color: #fff;
-    margin-top: 1rem;
+  text-align: center;
+  background-color: #8B4513;
+  color: white;
+  padding: 10px 0;
+  font-size: 0.9rem;
 }
